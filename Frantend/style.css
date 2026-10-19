@@ -1,0 +1,521 @@
+/* =========================
+   1. RESET & ROOT
+========================= */
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+:root {
+    --primary: #2563eb;
+    --primary-hover: #1d4ed8;
+
+    --secondary: #0f766e;
+    --secondary-light: #ccfbf1;
+
+    --navy: #172554;
+    --background: #f1f5f9;
+    --surface: #ffffff;
+
+    --text: #1e293b;
+    --text-light: #64748b;
+
+    --border: #e2e8f0;
+    --row-hover: #eff6ff;
+
+    --success: #16a34a;
+    --danger: #dc2626;
+    --danger-light: #fee2e2;
+
+    --shadow: 0 8px 24px rgba(15, 23, 42, 0.08);
+}
+
+/* =========================
+   2. BODY
+========================= */
+
+body {
+    min-height: 100vh;
+
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
+    gap: 30px;
+    padding: 35px 15px;
+
+    font-family: Arial, sans-serif;
+
+    color: var(--text);
+    background: var(--background);
+
+    overflow-x: hidden;
+}
+
+/* =========================
+   3. FORM
+========================= */
+
+form {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+
+    gap: 16px;
+
+    width: min(650px, 95%);
+    min-height: 220px;
+    padding: 25px;
+
+    background: var(--surface);
+
+    border: 1px solid var(--border);
+    border-radius: 14px;
+
+    box-shadow: var(--shadow);
+
+    transition: box-shadow 0.3s ease;
+}
+
+form:hover {
+    box-shadow: 0 12px 30px rgba(15, 23, 42, 0.12);
+}
+
+/* =========================
+   4. #categorie
+========================= */
+
+/* form #categorie {
+    width: 100%;
+    height: 42px;
+
+    padding: 0 12px;
+
+    font-size: 15px;
+    color: var(--text);
+
+    background: #f8fafc;
+
+    border: 1px solid var(--border);
+    border-radius: 8px;
+
+    outline: none;
+
+    transition: 0.2s ease;
+}
+
+form #categorie:hover {
+    border-color: #93c5fd;
+}
+
+form #categorie:focus {
+    border-color: var(--primary);
+
+    box-shadow: 0 0 0 3px rgba(37, 99, 235, 0.12);
+} */
+
+/* =========================
+   5. INPUTS
+========================= */
+
+form div {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    gap: 12px;
+    width: 100%;
+}
+
+form  input {
+    width: calc(50% - 6px);
+    min-width: 0;
+    height: 42px;
+
+    padding: 0 12px;
+
+    font-size: 15px;
+    color: var(--text);
+
+    background: #f8fafc;
+
+    border: 1px solid var(--border);
+    border-radius: 8px;
+
+    outline: none;
+
+    transition:
+        border-color 0.2s ease,
+        box-shadow 0.2s ease,
+        background-color 0.2s ease;
+}
+
+form  input::placeholder {
+    color: #94a3b8;
+}
+
+form h3 {
+    color: red;
+    display: none;
+}
+
+form  input:focus {
+    background: var(--surface);
+
+    border-color: var(--primary);
+
+    box-shadow: 0 0 0 3px rgba(37, 99, 235, 0.12);
+}
+#categorie {
+    width: 100%;
+}
+
+/* =========================
+   6. FORM BUTTON
+========================= */
+
+form button {
+    width: 150px;
+    max-width: 100%;
+    min-height: 42px;
+
+    padding: 0 18px;
+
+    font-size: 15px;
+    font-weight: 600;
+    color: white;
+
+    background: var(--primary);
+
+    border: none;
+    border-radius: 8px;
+
+    cursor: pointer;
+
+    box-shadow: 0 4px 10px rgba(37, 99, 235, 0.18);
+
+    transition:
+        background-color 0.2s ease,
+        transform 0.2s ease,
+        box-shadow 0.2s ease;
+}
+form button i {
+    margin-right:5px;
+}
+form button:hover {
+    background: var(--primary-hover);
+
+    transform: translateY(-2px);
+
+    box-shadow: 0 7px 15px rgba(37, 99, 235, 0.25);
+}
+
+form button:active {
+    transform: translateY(0);
+}
+
+/* =========================
+   7. TABLE
+========================= */
+
+table {
+    width: min(1000px, 95%);
+
+    border-collapse: collapse;
+    border-spacing: 0;
+
+    background: var(--surface);
+
+    border: 1px solid var(--border);
+    border-radius: 12px;
+
+    overflow: hidden;
+
+    box-shadow: var(--shadow);
+}
+
+/* =========================
+   8. TABLE HEADER
+========================= */
+
+thead {
+    text-align: center;
+    font-size: 15px;
+
+    color: white;
+    background: var(--navy);
+
+    height: 40px;
+}
+
+thead th{
+    padding: 14px 12px;
+
+    font-weight: 600;
+    white-space: nowrap;
+}
+
+/* =========================
+   9. TABLE BODY
+========================= */
+
+tbody tr {
+    background: var(--surface);
+
+    transition: background-color 0.2s ease;
+}
+
+tbody tr:nth-child(even) {
+    background: #f8fafc;
+}
+
+tbody tr:hover {
+    background: var(--row-hover);
+}
+
+tbody tr td {
+    padding: 13px 12px;
+
+    text-align: center;
+    font-size: 15px;
+    color: var(--text);
+
+    border-bottom: 1px solid var(--border);
+}
+
+tbody tr:last-child td {
+    border-bottom: none;
+}
+
+/* =========================
+   10. TABLE ACTION BUTTONS
+========================= */
+
+tbody tr td button {
+    display: inline-flex;
+    justify-content: center;
+    align-items: center;
+
+    width: 38px;
+    height: 36px;
+    margin: 2px;
+
+    font-size: 20px;
+
+    background: #e2e8f0;
+    color: var(--text);
+
+    border: 1px solid transparent;
+    border-radius: 7px;
+
+    cursor: pointer;
+
+    transition:1s;
+}
+.loading-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 12px;
+    padding: 25px;
+    color: #64748b;
+}
+
+.loader {
+    width: 25px;
+    height: 25px;
+    border: 3px solid #dbeafe;
+    border-top-color: #2563eb;
+    border-radius: 50%;
+    animation: loading 0.8s linear infinite;
+}
+
+@keyframes loading {
+    to {
+        transform: rotate(360deg);
+    }
+}
+.container-search {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+
+    width: min(400px, 95%);
+    height: 45px;
+    padding: 0 15px;
+
+    background-color: #ffffff;
+    border: 1px solid #e2e8f0;
+    border-radius: 10px;
+
+    color: #64748b;
+
+    transition: 0.3s ease;
+}
+
+/* .container-search:focus-within {
+    border-color: #2563eb;
+    box-shadow: 0 0 0 3px rgba(37, 99, 235, 0.12);
+} */
+
+.container-search input {
+    flex: 1;
+    width: 100%;
+    height: 100%;
+
+    font-size: 15px;
+    color: #1e293b;
+
+    background: transparent;
+    border: none;
+    outline: none;
+}
+
+.container-search input::placeholder {
+    color: #94a3b8;
+}
+
+.container-search i {
+    font-size: 16px;
+    color: #64748b;
+}
+
+
+#message{
+    position: absolute;
+    right: -100%;
+    top: 10%;
+    background-color: var(--navy);
+    color: white;
+    padding: 10px 15px;
+    border-radius: 5px;
+    font-size: 20px;
+    transition: 1s;
+}
+#message.active{
+    right: 2%;
+}
+/* =========================
+   11. UPDATE BUTTON
+========================= */
+
+tbody tr td button.update-btn {
+    color: var(--primary);
+    background: #dbeafe;
+}
+
+tbody tr td button.update-btn:hover {
+    color: white;
+    background: var(--primary);
+}
+
+/* =========================
+   12. DELETE BUTTON
+========================= */
+
+tbody tr td button.delete-btn {
+    color: var(--danger);
+    background: var(--danger-light);
+}
+
+tbody tr td button.delete-btn:hover {
+    color: white;
+    background: var(--danger);
+}
+
+/* =========================
+   13. KEYBOARD ACCESSIBILITY
+========================= */
+
+
+/* =========================
+   14. TABLET
+========================= */
+
+@media (max-width: 768px) {
+    body {
+        gap: 24px;
+        padding: 25px 12px;
+    }
+
+    form {
+        width: 100%;
+        padding: 22px 18px;
+    }
+
+    table {
+        width: 100%;
+    }
+
+    thead th {
+        padding: 12px 8px;
+        font-size: 14px;
+    }
+
+    tbody tr td {
+        padding: 11px 8px;
+        font-size: 14px;
+    }
+}
+
+/* =========================
+   15. MOBILE
+========================= */
+
+@media (max-width: 480px) {
+    body {
+        gap: 20px;
+        padding: 18px 8px;
+    }
+
+    form {
+        width: 100%;
+        padding: 20px 14px;
+        gap: 13px;
+    }
+
+    form div {
+        flex-direction: column;
+        gap: 12px;
+    }
+
+    form  input {
+        width: 100%;
+    }
+
+    form #categorie {
+        font-size: 14px;
+    }
+
+    form button {
+        width: 100%;
+    }
+
+    /* Table scroll */
+
+    table {
+        display: block;
+        max-width: 100%;
+        overflow-x: auto;
+        white-space: nowrap;
+    }
+
+    thead th {
+        padding: 11px 9px;
+        font-size: 13px;
+    }
+
+    tbody tr td {
+        padding: 10px 8px;
+        font-size: 13px;
+    }
+
+    tbody tr td button {
+        width: 34px;
+        height: 33px;
+        font-size: 14px;
+    }
+}

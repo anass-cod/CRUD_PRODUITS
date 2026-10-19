@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css">
+    <link rel="stylesheet" href="style.css">
+    <title>Products</title>
+</head>
+
+<body>
+    <form>
+        <div>
+            <input type="text" id="name" placeholder="name">
+            <input type="number" id="price" placeholder="price">
+        </div>
+        <input type="text" id="categorie" placeholder="categorie">
+        <h3 id="messageForm">name , categorie sont obligatoires !</h3>
+
+        <button id="addModifier" onclick="addModifierProduits()" type="button">
+            <i class="fa-solid fa-plus"></i>
+            Ajoute
+        </button>
+    </form>
+    <h2 id="message">
+
+    </h2>
+    <div class="container-search">
+        <i class="fa-solid fa-magnifying-glass"></i>
+        <input type="text" id="search" onkeyup="search()" placeholder="Search products...">
+    </div>
+    <table border="1">
+        <thead>
+            <tr>
+                <td>Nom</td>
+                <td>Prix</td>
+                <td>Catégorie</td>
+                <td>MOD - SUP</td>
+            </tr>
+        </thead>
+        <tbody id="table">
+        </tbody>
+    </table>
+    <script src="./script.js"></script>
+</body>
+
+</html>
